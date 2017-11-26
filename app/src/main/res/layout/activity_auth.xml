@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/login" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/password" />
+
+    <co.ceryle.radiorealbutton.RadioRealButtonGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent">
+
+        <co.ceryle.radiorealbutton.RadioRealButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rrb_drawable="@drawable/student"
+            app:rrb_drawableHeight="36dp"
+            app:rrb_drawablePadding="8dp"
+            app:rrb_drawableWidth="36dp"
+            app:rrb_ripple="true"
+            app:rrb_rippleColor="@android:color/darker_gray"
+            app:rrb_textColor="@android:color/black" />
+
+
+        <co.ceryle.radiorealbutton.RadioRealButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rrb_drawable="@drawable/teacher"
+            app:rrb_drawableHeight="36dp"
+            app:rrb_drawablePadding="8dp"
+            app:rrb_drawableWidth="36dp"
+            app:rrb_ripple="true"
+            app:rrb_rippleColor="@android:color/darker_gray"
+            app:rrb_textColor="@android:color/black" />
+
+        <co.ceryle.radiorealbutton.RadioRealButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rrb_drawable="@drawable/moderator"
+            app:rrb_drawableHeight="36dp"
+            app:rrb_drawablePadding="8dp"
+            app:rrb_drawableWidth="36dp"
+            app:rrb_ripple="true"
+            app:rrb_rippleColor="@android:color/darker_gray"
+            app:rrb_textColor="@android:color/black" />
+
+
+    </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+    <Button
+        style="@style/MyButton"
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter" />
+
+</LinearLayout>
