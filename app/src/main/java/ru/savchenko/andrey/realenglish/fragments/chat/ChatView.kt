@@ -8,5 +8,5 @@ import ru.savchenko.andrey.realenglish.entities.Message
  */
 interface ChatView : MvpView{
     fun setMessages(messages:MutableList<Message>)
-    fun messageSent()
+    fun messageSent(position:Int)
 }

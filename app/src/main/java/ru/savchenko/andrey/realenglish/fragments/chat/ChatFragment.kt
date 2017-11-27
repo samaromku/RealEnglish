@@ -37,9 +37,9 @@ class ChatFragment : BaseFragment(), OnItemClickListener, ChatView {
         })
     }
 
-    override fun messageSent() {
+    override fun messageSent(position:Int) {
         etTaskBody.setText("")
-        chatAdater.notifyDataSetChanged()
+        chatAdater.notifyItemInserted(position)
         rvChat.smoothScrollToPosition(chatAdater.itemCount)
     }
 
