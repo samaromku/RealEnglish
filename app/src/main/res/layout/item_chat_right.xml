@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
+    android:layout_marginBottom="4dp"
     android:layout_marginLeft="16dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp">
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:background="@drawable/rounded_message_right"
         android:gravity="start"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:minWidth="150dp">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="end"
+            android:textColor="@android:color/white"
+            tools:text="12.10.2017" />
 
         <TextView
             android:id="@+id/tvUserMessage"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:gravity="end"
             android:textColor="@android:color/white"
             android:textSize="15sp"
             android:textStyle="bold"
             tools:text='Петя Петечкин' />
     </LinearLayout>
-</FrameLayout>
+</RelativeLayout>
