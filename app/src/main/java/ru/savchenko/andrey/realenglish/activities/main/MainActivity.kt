@@ -1,4 +1,4 @@
-package ru.savchenko.andrey.realenglish.main
+package ru.savchenko.andrey.realenglish.activities.main
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -17,18 +17,15 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import ru.savchenko.andrey.realenglish.R
+import ru.savchenko.andrey.realenglish.base.BaseActivity
+import ru.savchenko.andrey.realenglish.fragments.chat.ChatFragment
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -65,20 +62,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_home_task -> {
                sendNotify()
             }
             R.id.nav_gallery -> {
 
             }
-            R.id.nav_slideshow -> {
-
+            R.id.nav_chat -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_containter, ChatFragment())
+                        .commit()
             }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
+            R.id.nav_exit -> {
+                onBackPressed()
             }
         }
 
