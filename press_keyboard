@@ -1,0 +1,22 @@
+new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Instrumentation inst = new Instrumentation();
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_1);
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_1);
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_2);
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_2);
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_3);
+                    Thread.sleep(250);
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_3);
+                    Thread.sleep(250);
+                } catch (InterruptedException e) {
+                }
+            }
+        }).start();
